@@ -1,6 +1,5 @@
 class AudioConfig:
     def __init__(self):
-        self.audio_dir = "relatorios/"
         self.audio_format = "wav"
         self.sample_rate = 44100
         self.channels = 2

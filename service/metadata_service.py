@@ -5,12 +5,12 @@ from utils.csv_utils import save_csv
 def build_metadata(path_entry, path_output):
 
     arquivos = list_audios(path_entry)
-    print(f"Arquivos encontrados: {arquivos}")
+    print(f"\nArquivos encontrados: {arquivos}")
 
     ids = extract_ids(arquivos)
-    print(f"IDs encontrados: {ids}")
-
-    exit('debbuging')
+    print(f"\nIDs encontrados: {ids}")
 
     dados = search_info_costumers(ids)
+    print(f"\nDados encontrados: {dados}")
+
     save_csv(dados, path_output)

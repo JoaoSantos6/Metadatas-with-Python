@@ -1,3 +1,4 @@
+from time import sleep
 from config.db_config import get_connection
 from model.costumer import Costumer
 
@@ -8,18 +9,27 @@ def search_info_costumers(lista_ids):
     clientes = []
     for id_atendimento in lista_ids:
         cursor.execute("""
-            SELECT nome, cpf, telefone, data_nascimento
-            FROM clientes
-            WHERE atendimento_id = %s
+            SELECT 
+                       nome_cli, 
+                       document_cli, 
+                       phone_cli, 
+                       tipo_atendimento,
+                       duracao
+            FROM call_info
+            WHERE id_call = %s
         """, (id_atendimento,))
         row = cursor.fetchone()
+
+        sleep(5) #simula latencia em ambiente produtivo
+
         if row:
             cliente = Costumer(
-                id_atendimento=id_atendimento,
-                nome=row[0],
-                cpf=row[1],
-                telefone=row[2],
-                data_nascimento=row[3]
+                id_call=id_atendimento,
+                name=row[0],
+                document=row[1],
+                phone=row[2],
+                tipo=row[3],
+                duracao=row[4]
             )
             clientes.append(cliente)
 

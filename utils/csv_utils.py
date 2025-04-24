@@ -1,10 +1,16 @@
-import csv
 import os
+import csv
 
-def save_csv(dados, pasta_saida):
-    os.makedirs(pasta_saida, exist_ok=True)
-    caminho = os.path.join(pasta_saida, "metadados.csv")
-    with open(caminho, mode='w', newline='', encoding='utf-8') as arquivo:
-        writer = csv.DictWriter(arquivo, fieldnames=["id", "nome", "cpf", "telefone"])
-        writer.writeheader()
-        writer.writerows(dados)
+def save_csv(dados, path_output):
+    directory = os.path.dirname(path_output)
+    if not os.path.exists(directory):
+        os.makedirs(directory)
+
+    dados_dict = [cliente.to_dict() for cliente in dados]
+
+    with open(path_output, 'w', newline='') as f:
+        fieldnames = ['id_call', 'name', 'document', 'phone', 'tipo', 'duracao']
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+
+        writer.writeheader()  
+        writer.writerows(dados_dict)  
