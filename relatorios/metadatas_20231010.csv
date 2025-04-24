@@ -1,11 +1,11 @@
 id_call,name,document,phone,tipo,duracao
-1,Ana Silva,12345678900,(11) 98765-4321,Suporte Técnico,0:05:00
 10,Julia Fernandes,88899900011,(85) 94444-5555,Informação,0:03:00
-2,Bruno Oliveira,98765432100,(21) 91234-5678,Vendas,0:03:00
 3,Carlos Mendes,11122233344,(31) 99887-7766,Reclamação,0:12:00
-4,Daniela Rocha,55566677788,(41) 91234-1111,Informação,0:02:00
-5,Eduardo Lima,22233344455,(51) 99876-5432,Suporte Técnico,0:06:00
-6,Fernanda Souza,33344455566,(61) 98888-9999,Vendas,0:08:00
 7,Gustavo Nunes,44455566677,(71) 97777-1234,Cobrança,0:04:00
+1,Ana Silva,12345678900,(11) 98765-4321,Suporte Técnico,0:05:00
+5,Eduardo Lima,22233344455,(51) 99876-5432,Suporte Técnico,0:06:00
 8,Helena Castro,66677788899,(81) 96666-7777,Cancelamento,0:10:00
+2,Bruno Oliveira,98765432100,(21) 91234-5678,Vendas,0:03:00
+4,Daniela Rocha,55566677788,(41) 91234-1111,Informação,0:02:00
+6,Fernanda Souza,33344455566,(61) 98888-9999,Vendas,0:08:00
 9,Igor Martins,77788899900,(91) 95555-6666,Reclamação,0:07:00

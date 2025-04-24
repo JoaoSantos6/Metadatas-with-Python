@@ -4,9 +4,11 @@ from utils.csv_utils import save_csv
 
 def build_metadata(path_entry, path_output):
 
+    #=========== LISTA AUDIOS ENCONTRADOS ===================
     arquivos = list_audios(path_entry)
     print(f"\nArquivos encontrados: {arquivos}")
 
+    #=========== EXTRAI ID DOS AUDIOS ENCONTRADOS ===================
     ids = extract_ids(arquivos)
     print(f"\nIDs encontrados: {ids}")
 

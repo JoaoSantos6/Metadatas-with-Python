@@ -2,8 +2,10 @@ from service.metadata_service import build_metadata
 from pathlib import Path
 import os
 from dotenv import load_dotenv
-load_dotenv()  # Carrega variáveis do arquivo .env
 from config.csv_config import CsvConfig
+from datetime import datetime
+
+load_dotenv()  # Carrega variáveis do arquivo .env
 
 if __name__ == "__main__":
 
